@@ -29,3 +29,10 @@ jobs:
           md .\artifacts
           cd .\artifacts
           D:\repos\moulmahdi\sources\fdb_nightlies.ps1 -RunId ${{github.run_id}}
+        
+      # Publish build logs
+      - uses: actions/upload-artifact@v2
+        name: Publish Artifacts
+        with:
+          name: build_logs
+          path: ${{ github.workspace }}/artifacts/build_logs
