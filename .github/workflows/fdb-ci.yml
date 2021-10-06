@@ -26,6 +26,7 @@ jobs:
      
       # Runs a single command using the runners shell
       - name: Run Build
+        continue-on-error: true
         shell: cmd
         run : |
           mkdir .\artifacts
