@@ -26,11 +26,11 @@ jobs:
      
       # Runs a single command using the runners shell
       - name: Run Build
-        shell: powershell
+        shell: cmd
         run : |
-          md .\artifacts
+          mkdird .\artifacts
           cd .\artifacts
-          D:\repos\moulmahdi\sources\fdb_nightlies.ps1 -RunId ${{github.run_id}}
+          powershell.exe -File D:\repos\moulmahdi\sources\fdb_nightlies.ps1 -RunId ${{github.run_id}}
         
       # Publish build logs
       - uses: actions/upload-artifact@v2
