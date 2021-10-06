@@ -28,7 +28,7 @@ jobs:
       - name: Run Build
         shell: cmd
         run : |
-          mkdird .\artifacts
+          mkdir .\artifacts
           cd .\artifacts
           powershell.exe -File D:\repos\moulmahdi\sources\fdb_nightlies.ps1 -RunId ${{github.run_id}}
         
