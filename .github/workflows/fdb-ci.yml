@@ -22,7 +22,7 @@ jobs:
       - name: Cleanup workspace
         shell: powershell
         run: |
-          Remove-Item -Recurse -Force .\artifacts -ErrorAction Ignore
+          Remove-Item -Recurse -Force .\build -ErrorAction Ignore
      
      # Checkout the build repository
       - uses: actions/checkout@v2
